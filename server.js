@@ -16,6 +16,6 @@ app.use(express.json());
 
 app.use("/api/clients", clientRoutes);
 app.use("/api/transactions", transactionRoutes);
-app.get("/", (req, res) => res.send("Hello World"));
+app.get("/", (req, res) => res.send({ message: "Hello World" , status: 200}));
 
 app.listen(5000, () => console.log("Server running"));
